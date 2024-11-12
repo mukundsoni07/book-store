@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get('https://book-store-flame-phi.vercel.app/?vercelToolbarCode=QN5sYGvPPwkSHx2')
+      .get('https://book-store-backend-aqpy.onrender.com/books')
       .then((response) => {
         setBooks(response.data.data);
         setLoading(false);
