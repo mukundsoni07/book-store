@@ -3,7 +3,7 @@ import { Book } from '../models/bookModel.js';
 
 const router = express.Router();
 
-router.post('/', async (request, response) => {
+router.post('/add-book', async (request, response) => {
     try{
         if(
             !request.body.title
@@ -41,7 +41,7 @@ router.get('/', async (request, response) => {
     }
 })
 
-router.get('/:id', async (request, response) => {
+router.get('/show-book/:id', async (request, response) => {
     try {
 
         const { id } = request.params;
@@ -55,7 +55,7 @@ router.get('/:id', async (request, response) => {
     }
 });
 
-router.put('/:id', async (request, response) => {
+router.put('/edit-book/:id', async (request, response) => {
     try {
         if(
             !request.body.title
@@ -79,7 +79,7 @@ router.put('/:id', async (request, response) => {
     }
 })
 
-router.delete('/:id', async (request, response) => {
+router.delete('/delete-book/:id', async (request, response) => {
     try {
         const { id } = request.params;
 
