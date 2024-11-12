@@ -19,7 +19,7 @@ const EditBook = () => {
     axios.get(`https://book-store-backend-aqpy.onrender.com/books/edit-book/${id}`)
     .then((response) => {
         setAuthor(response.data.author);
-        setPublishYear(response.data.publishYear)
+        setPublishYear(response.data.publishYear);
         setTitle(response.data.title)
         setLoading(false);
       }).catch((error) => {
@@ -37,7 +37,7 @@ const EditBook = () => {
     };
     setLoading(true);
     axios
-      .put(`http://localhost:5555/books/${id}`, data)
+      .put(`https://book-store-backend-aqpy.onrender.com/books/edit-book/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Edited successfully', { variant: 'success' });
